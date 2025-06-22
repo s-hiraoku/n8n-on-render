@@ -27,10 +27,12 @@ n8n ワークフロー自動化プラットフォームを Render で簡単に�
    - **Plan**: `Starter`
    - **Auto-Deploy**: `Yes`
 
-### 2. 環境変数の設定
+### 2. 環境変数の設定（オプション）
 
-Environment タブで以下の4つを設定：
+まずは環境変数なしでテストデプロイしてください。
+動作確認後、Basic認証を有効にする場合は以下を設定：
 
+- `N8N_BASIC_AUTH_ACTIVE`: `true`
 - `N8N_BASIC_AUTH_USER`: `admin`（または任意のユーザー名）
 - `N8N_BASIC_AUTH_PASSWORD`: 強力なパスワード
 - `N8N_HOST`: `your-app-name.onrender.com`（実際のサービス名）
