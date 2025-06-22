@@ -8,5 +8,4 @@ VOLUME /home/node/.n8n
 
 EXPOSE 5678
 
-# n8n公式イメージのエントリーポイントを使用
-CMD ["tini", "--", "/usr/local/bin/docker-entrypoint.sh", "n8n"]
+# n8n公式イメージのデフォルトを使用（何も指定しない）
