@@ -1,0 +1,14 @@
+FROM n8nio/n8n
+
+ENV N8N_BASIC_AUTH_ACTIVE=true
+
+# Basic認証ユーザー名とパスワード（Renderの環境変数から渡す）
+ENV N8N_BASIC_AUTH_USER=$N8N_BASIC_AUTH_USER
+ENV N8N_BASIC_AUTH_PASSWORD=$N8N_BASIC_AUTH_PASSWORD
+
+# 永続化用のディレクトリ
+VOLUME /home/node/.n8n
+
+EXPOSE 5678
+
+CMD ["n8n"]

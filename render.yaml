@@ -1,0 +1,42 @@
+services:
+  - type: web
+    name: n8n
+    env: docker
+    plan: starter
+    autoDeploy: true
+    disk:
+      name: n8n-data
+      mountPath: /home/node/.n8n
+      sizeGB: 5
+    envVars:
+      - key: N8N_BASIC_AUTH_USER
+        sync: false  # Renderダッシュボードで設定
+      - key: N8N_BASIC_AUTH_PASSWORD
+        sync: false  # Renderダッシュボードで設定
+      - key: N8N_HOST
+        sync: false  # Renderダッシュボードで設定（例: your-app-name.onrender.com）
+      - key: N8N_PORT
+        value: 5678
+      - key: N8N_PROTOCOL
+        value: https
+      - key: WEBHOOK_TUNNEL_URL
+        sync: false  # Renderダッシュボードで設定（例: https://your-app-name.onrender.com）
+      - key: N8N_ENCRYPTION_KEY
+        sync: false  # Renderダッシュボードで設定（32文字のランダム文字列）
+      - key: DB_TYPE
+        value: postgresdb
+      - key: DB_POSTGRESDB_HOST
+        sync: false  # PostgreSQL データベースホスト
+      - key: DB_POSTGRESDB_PORT
+        value: 5432
+      - key: DB_POSTGRESDB_DATABASE
+        sync: false  # データベース名
+      - key: DB_POSTGRESDB_USER
+        sync: false  # データベースユーザー名
+      - key: DB_POSTGRESDB_PASSWORD
+        sync: false  # データベースパスワード
+      - key: N8N_METRICS
+        value: true
+      - key: NODE_ENV
+        value: production
+        

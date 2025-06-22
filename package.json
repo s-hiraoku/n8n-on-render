@@ -1,0 +1,29 @@
+{
+  "name": "n8n-on-render",
+  "version": "1.0.0",
+  "description": "n8n workflow automation platform self-hosted on Render",
+  "main": "index.js",
+  "scripts": {
+    "dev": "echo 'This project uses Docker. Run: docker build -t n8n-render . && docker run -p 5678:5678 n8n-render'",
+    "build": "docker build -t n8n-render .",
+    "start": "docker run -p 5678:5678 n8n-render"
+  },
+  "keywords": [
+    "n8n",
+    "workflow",
+    "automation",
+    "render",
+    "docker",
+    "self-hosted"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "bugs": {
+    "url": ""
+  },
+  "homepage": ""
+}
